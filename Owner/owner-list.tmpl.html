@@ -1,0 +1,115 @@
+
+<div class="jumbotron">
+    <div class="container text-center">
+
+        <div class="page-header text-center">
+            <h2>Owner Login.<small>Sign In to see all  the customers under you!</small></h2>
+        </div>
+
+    </div>
+</div>
+
+<div>
+    <section class="loginOwner ownerForm" >
+        <div class="row ">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Owner Login:</h3>
+                    </div>
+                    <div class="panel-body">
+
+
+                        <form ng-submit="ownerVm.Register()" novalidate name="ownerForm">
+
+
+
+
+
+                         <div class="row">
+                             <div class="col-lg-2">
+                                 <label for="email" class="col-lg-2 control-label">Email</label>
+                             </div>
+
+                                 <div class="col-lg-10">
+                                     <div class="input-group">
+                                         <span class="input-group-addon glyphicon glyphicon-user"></span>
+
+                                         <input type="email" class="form-control" id="email" name="email" placeholder="Your Name" ng-model="ownerVm.user.email" required >
+
+
+                                     </div>
+                                     <div class="errors" ng-messages="ownerForm.email.$error" ng-if="ownerForm.email.$dirty">
+                                         <p ng-message="required">Email is required</p>
+                                         <p ng-message="type">Email must be valid</p>
+                                     </div>
+
+                             </div><!-- End form group -->
+
+                         </div><br>
+
+
+
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <label for="password" class="col-lg-2 control-label">Password</label>
+                                </div>
+
+                                <div class="col-lg-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon glyphicon glyphicon-earphone"></span>
+                                        <input type="text" class="form-control" ng-model="ownerVm.user.password" name="password"  id="password" placeholder="Password" required  >
+
+                                    </div>
+                                    <div class="errors" ng-messages="ownerForm.password.$error" ng-if="ownerForm.password.$dirty">
+                                        <p ng-message="required">password is required</p>
+
+
+                                    </div>
+
+                                </div><!-- End form group -->
+
+                            </div><br>
+
+
+
+                            <div class=" col-lg-12 form-group text-center" >
+
+                                 <button type="submit" class="btn btn-primary"  data-toggle="modal" data-target=".bs-example-modal-sm" ng-disabled="ownerForm.$invalid">Login</button>
+
+                            </div>
+
+
+
+
+                            <hr>
+
+
+
+
+
+                        </form>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+
+    </section>
+
+
+    <!--<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">-->
+        <!--<div class="modal-dialog modal-sm">-->
+            <!--<div class="modal-content">-->
+                <!--...{{ownerVm.result}}...-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+</div>
